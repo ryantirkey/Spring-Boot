@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Build-Jdk-Spec: 21
+Implementation-Title: springDataJpa_CrudRepo_Method_findBy_CustomQuery_1
+ 8
+Implementation-Version: 0.0.1-SNAPSHOT
+Created-By: Maven Integration for Eclipse
+
