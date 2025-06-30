@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+
+function confirm(){
+	alert("Are you sure??");
+}
+
+
+</script>
+
+	<p th:text="${msg}">
+	<p th:text="${delmsg}"></p>
+	
+	<a th:href="@{/}">+ Add Product</a>
+	<table border="1">
+		<thead>
+		
+			<tr>
+				<th>S.no</th>
+				<th>Name</th>
+				<th>Price</th>
+				<th>Quantity</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="data : ${records}">
+				<td th:text="${data.pid}"></td>
+				<td th:text="${data.name}"></td>
+				<td th:text="${data.price}"></td>
+				<td th:text="${data.qty}"></td>
+				<td > <a th:href="@{delete? (id=${data.pid})}" onclick="confirm()" >Delete</a> 
+						<a th:href="@{edit? (id=${data.pid})}" >Edit</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+</body>
+</html>
